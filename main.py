@@ -32,7 +32,7 @@ async def on_ready():
         heartbeat.start()
     print("❤️ Heartbeat loop started!")
 
-@tasks.loop(seconds=180)
+@tasks.loop(minutes=3)
 async def heartbeat():
     try:
         channel = client.get_channel(CHANNEL_ID)
