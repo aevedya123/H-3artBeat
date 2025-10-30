@@ -27,7 +27,7 @@ async def on_ready():
     print(f"✅ Logged in as {client.user}")
     heartbeat.start()
 
-@tasks.loop(minutes=5)
+@tasks.loop(seconds=30)
 async def heartbeat():
     channel = client.get_channel(CHANNEL_ID)
     if channel:
